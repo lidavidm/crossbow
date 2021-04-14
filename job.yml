@@ -1,0 +1,20 @@
+!Job
+target: !Target
+  head: 926c3a84485ea13ab4fbe1d84a7b2188aa788fbf
+  email: li.davidm96@gmail.com
+  branch: bugfix/ARROW-12325
+  remote: https://github.com/westonpace/arrow
+  version: 1.1.0.dev1748
+  no_rc_version: 1.1.0.dev1748
+  no_rc_semver_version: 1.1.0-dev1748
+tasks:
+  gandiva-jar-ubuntu: !Task
+    ci: github
+    template: gandiva-jars/github.linux.yml
+    artifacts:
+    - arrow-gandiva-1.1.0.dev1748-SNAPSHOT.jar
+    params: {}
+    branch: build-4-github-gandiva-jar-ubuntu
+    commit: e0a61ad0ab923bf4351291fffee924d6ce345c6d
+params: {}
+branch: build-4
