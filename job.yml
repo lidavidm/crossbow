@@ -1,0 +1,24 @@
+!Job
+target: !Target
+  head: 926f799cd16ab234d0f6ae097420e30cd1f92c33
+  email: li.davidm96@gmail.com
+  branch: bugfix/arrow-12220
+  remote: https://github.com/westonpace/arrow.git
+  version: 1.1.0.dev1773
+  no_rc_version: 1.1.0.dev1773
+  no_rc_semver_version: 1.1.0-dev1773
+tasks:
+  test-ubuntu-20.04-cpp-thread-sanitizer: !Task
+    ci: github
+    template: docker-tests/github.linux.yml
+    artifacts: []
+    params:
+      env:
+        CLANG_TOOLS: 11
+        UBUNTU: 20.04
+      run: ubuntu-cpp-thread-sanitizer
+
+    branch: build-0-github-test-ubuntu-20.04-cpp-thread-sanitizer
+    commit: 9df0199df060565bec4436cbd605020e9fc6f459
+params: {}
+branch: build-0
