@@ -1,0 +1,24 @@
+!Job
+target: !Target
+  head: 9a07ed06cb0d4c0ac85b1915f0460fe242d1d102
+  email: li.davidm96@gmail.com
+  branch: ARROW-12379-tsan
+  remote: https://github.com/pitrou/arrow
+  version: 1.1.0.dev1799
+  no_rc_version: 1.1.0.dev1799
+  no_rc_semver_version: 1.1.0-dev1799
+tasks:
+  test-ubuntu-20.04-cpp-thread-sanitizer: !Task
+    ci: github
+    template: docker-tests/github.linux.yml
+    artifacts: []
+    params:
+      env:
+        CLANG_TOOLS: 11
+        UBUNTU: 20.04
+      run: ubuntu-cpp-thread-sanitizer
+
+    branch: build-2-github-test-ubuntu-20.04-cpp-thread-sanitizer
+    commit: 546d54b0a679142cd14463be711091c2092f1927
+params: {}
+branch: build-2
