@@ -1,0 +1,19 @@
+!Job
+target: !Target
+  head: 43f80156c6d4bdd48c03381007f8f5c36224c8b3
+  email: li.davidm96@gmail.com
+  branch: arrow-13382
+  remote: https://github.com/lidavidm/arrow
+  version: 4.0.0.dev1210
+  no_rc_version: 4.0.0.dev1210
+  no_rc_semver_version: 4.0.0-dev1210
+tasks:
+  test-r-rtools-35: !Task
+    ci: github
+    template: r/github.windows.rtools35.yml
+    artifacts: []
+    params: {}
+    branch: build-8-github-test-r-rtools-35
+    commit: b7a794dfe71a3b35b3dcd669fec58903fa70f468
+params: {}
+branch: build-8
