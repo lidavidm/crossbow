@@ -1,0 +1,19 @@
+!Job
+target: !Target
+  head: 0c1f5cab50d3e74b2afa671eb9e5bb5234f122dc
+  email: li.davidm96@gmail.com
+  branch: arrow-13382
+  remote: https://github.com/lidavidm/arrow
+  version: 4.0.0.dev1195
+  no_rc_version: 4.0.0.dev1195
+  no_rc_semver_version: 4.0.0-dev1195
+tasks:
+  homebrew-r-autobrew: !Task
+    ci: github
+    template: r/github.macos.autobrew.yml
+    artifacts: []
+    params: {}
+    branch: build-16-github-homebrew-r-autobrew
+    commit: ea810cd2a20eccd10a220e9911496f48e00e589a
+params: {}
+branch: build-16
